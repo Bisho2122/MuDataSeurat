@@ -262,7 +262,7 @@ setMethod("WriteH5AD", "Seurat", function(object, file, assay = NULL, overwrite 
 #' @import hdf5r methods
 #'
 #' @exportMethod WriteH5MU
-setMethod("WriteH5MU", "Seurat", function(object, file, overwrite) {
+setMethod("WriteH5MU", "SeuratObject", function(object, file, overwrite) {
   h5 <- open_h5(file)
 
   # .obs
